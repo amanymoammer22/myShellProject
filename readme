@@ -1,0 +1,51 @@
+Welcome to myshell
+-------------------
+
+myshell is a simple UNIX-like command-line shell with basic internal command support and I/O redirection.
+
+Usage:
+------
+
+- Run `./myshell` to start the shell interactively.
+- Run `./myshell filename` to execute commands from a batch file.
+
+Supported Internal Commands:
+----------------------------
+
+1. cd <directory>     : Change current directory or show if none.
+2. clr                : Clear the screen.
+3. dir <directory>    : List contents of the directory.
+4. environ            : Show all environment variables.
+5. echo <message>     : Display the message.
+6. help               : Show this manual using 'more'.
+7. pause              : Wait until Enter is pressed.
+8. quit               : Exit the shell.
+
+I/O Redirection:
+----------------
+
+You can use:
+- `< file`    to read input from a file.
+- `> file`    to write output to a file (overwrite).
+- `>> file`   to append output to a file.
+
+Examples:
+---------
+
+- `ls -l > output.txt`            → saves listing to file
+- `sort < data.txt > sorted.txt`  → reads input from one and writes to another
+
+Background Execution:
+---------------------
+
+Use `&` at the end of the command to run it in background.
+
+Example:
+- `sleep 10 &`
+
+Environment Variables:
+----------------------
+
+- `shell`   → Path of the myshell executable.
+- `parent`  → Used for child processes invoked from the shell.
+
